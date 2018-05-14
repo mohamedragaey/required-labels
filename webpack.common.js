@@ -2,6 +2,7 @@ const path = require('path')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const YarnAddWebpackPlugin = require('yarn-add-webpack-plugin')
 
 module.exports = {
   entry: ['./src/js/script.js', './src/scss/app.scss'],
@@ -20,6 +21,17 @@ module.exports = {
       // a watch or webpack-dev-server build. Setting this
       // to `true` copies all files.
       copyUnmodified: false
+    }),
+    // Install new npm packages when they used without being downloaded yet
+    new YarnAddWebpackPlugin({
+      // save dependencies as development or regular dependencies.
+      dev: false,
+      // Generate a lock file or don't. It's up to you!
+      pure: false,
+      // Install missing peerDependencies
+      peerDependencies: true,
+      // Reduce amount of console logging
+      quiet: false
     })
   ],
 

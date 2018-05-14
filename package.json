@@ -1,17 +1,17 @@
 {
-  "name": "webpack-starter-kit",
+  "name": "required-labels",
   "version": "1.0.0",
-  "description": "webpack starter kit",
+  "description": "npm package to add * into label tag in form if the input is required",
   "main": "webpack.common.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "NODE_ENV=development webpack-dev-server --progress --watch --config webpack.dev.js",
-    "dev": "NODE_ENV=development webpack --progress --watch --hide-modules --config webpack.dev.js",
+    "watch": "NODE_ENV=development webpack --progress --watch --hide-modules --config webpack.dev.js",
     "prod": "NODE_ENV=production webpack --progress --hide-modules --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.arkdev.net:front-end/webpack-starter-kit.git"
+    "url": "https://github.com/mohamedragaey/required-labels.git"
   },
   "keywords": [],
   "author": "Mohamed Ragaey <mragaey@arkdev.net>",
