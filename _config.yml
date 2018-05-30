@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
 title: Required Labels
-description: A short description of your site's purpose
+description: npm package for Adding * into label if input is required
 show_downloads: "true"

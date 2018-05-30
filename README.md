@@ -1,4 +1,3 @@
-## Welcome to Required label plugin
 ### Install
 Using Yarn
 `yarn add required-labels`
@@ -10,7 +9,7 @@ Using NPM
 ```require('required-labels')``` 
 
 * Then call the function
---> `requiredLabels(selector)` 
+`requiredLabels(selector)` 
 
 ### Examples
 HTML markup as default 
