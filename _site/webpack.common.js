@@ -1,42 +1,22 @@
 const path = require('path')
+const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const YarnAddWebpackPlugin = require('yarn-add-webpack-plugin')
 
 module.exports = {
-  entry: ['./src/js/script.js', './src/scss/app.scss'],
+  entry: ['./src/js/require-label.js', './src/scss/app.scss'],
 
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new ExtractTextPlugin({filename: 'css/app.css', disable: false, allChunks: true}),
-
-    // Copy Fonts and Images From src to dist
-    new CopyWebpackPlugin([
-      {from: 'src/fonts', to: './fonts'},
-      {from: 'src/images', to: './images'},
-      {from: 'src/favicon', to: './favicon'}
-    ], {
-      // By default, we only copy modified files during
-      // a watch or webpack-dev-server build. Setting this
-      // to `true` copies all files.
-      copyUnmodified: false
-    }),
-    // Install new npm packages when they used without being downloaded yet
-    new YarnAddWebpackPlugin({
-      // save dependencies as development or regular dependencies.
-      dev: false,
-      // Generate a lock file or don't. It's up to you!
-      pure: false,
-      // Install missing peerDependencies
-      peerDependencies: true,
-      // Reduce amount of console logging
-      quiet: false
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ],
 
   output: {
-    filename: 'js/main.js',
+    filename: 'js/required-label.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/'
   },
@@ -106,53 +86,6 @@ module.exports = {
           ],
           fallback: 'style-loader'
         })
-      },
-
-      // Rule for images
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images/'
-            }
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              bypassOnDebug: true,
-              mozjpeg: {
-                progressive: true,
-                quality: 65
-              },
-              optipng: {
-                enabled: true
-              },
-              pngquant: {
-                quality: '65-90',
-                speed: 4
-              },
-              gifsicle: {
-                interlaced: false
-              },
-              webp: {
-                quality: 75
-              }
-            }
-          }
-        ]
-      },
-
-      // Rule for Fonts
-      {
-        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/'
-        }
       }
     ]
   }

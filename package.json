@@ -2,7 +2,7 @@
   "name": "required-labels",
   "version": "1.0.0",
   "description": "npm package to add * into label tag in form if the input is required",
-  "main": "webpack.common.js",
+  "main": "src/js/require-label.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "NODE_ENV=development webpack-dev-server --progress --watch --config webpack.dev.js",
