@@ -1,18 +1,13 @@
 const path = require('path')
-const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  entry: ['./src/js/require-label.js', './src/scss/app.scss'],
+  entry: ['./src/js/app.js', './src/scss/app.scss'],
 
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new ExtractTextPlugin({filename: 'css/app.css', disable: false, allChunks: true}),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    })
+    new ExtractTextPlugin({filename: 'css/app.css', disable: false, allChunks: true})
   ],
 
   output: {
