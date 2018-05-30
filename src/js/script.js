@@ -5,7 +5,7 @@
 try {
   window.$ = window.jQuery = require('jquery')
   require('./bootstrap-sass')
-  // require('./additional-scripts')
+  require('./admin')
 
   if (process.env.NODE_ENV !== 'production') {
     console.log('Looks like we are in development mode!')

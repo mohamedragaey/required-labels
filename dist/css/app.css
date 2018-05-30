@@ -5272,20 +5272,6 @@ a,
   color: #ffffff;
   background: #6eaf75; }
 
-@font-face {
-  font-family: 'Proxima-Nova-Regular';
-  src: url("/assets/fonts/ProximaNova-Regular.eot");
-  src: url("/assets/fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ProximaNova-Regular.woff2") format("woff2"), url("/assets/fonts/ProximaNova-Regular.woff") format("woff"), url("/assets/fonts/ProximaNova-Regular.ttf") format("truetype"), url("/assets/fonts/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Hacen Vanilla Ultra';
-  src: url("/assets/fonts/HacenVanillaUltraLight/HacenVanillaUltraLight.eot");
-  src: url("/assets/fonts/HacenVanillaUltraLight/HacenVanillaUltraLight.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/HacenVanillaUltraLight/HacenVanillaUltraLight.woff2") format("woff2"), url("/assets/fonts/HacenVanillaUltraLight/HacenVanillaUltraLight.woff") format("woff"), url("/assets/fonts/HacenVanillaUltraLight/HacenVanillaUltraLight.ttf") format("truetype"), url("/assets/fonts/HacenVanillaUltraLight/HacenVanillaUltraLight.svg#HacenVanillaUltraLight") format("svg");
-  font-weight: 200;
-  font-style: normal; }
-
 /**
 Styles for Header Section Goes Here
  */
@@ -5298,5 +5284,41 @@ footer {
   padding: 15px 0;
   color: #ffffff;
   text-transform: uppercase; }
+
+.required-label {
+  position: relative;
+  padding-right: 10px; }
+  .required-label:after {
+    content: '*';
+    color: #d9534f;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    max-height: 100%; }
+
+input:required::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */ }
+  input:required::-webkit-input-placeholder:before {
+    content: "*";
+    color: #d9534f; }
+
+input:required::-moz-placeholder {
+  /* Firefox 19+ */ }
+  input:required::-moz-placeholder:before {
+    content: "*";
+    color: #d9534f; }
+
+input:required:-ms-input-placeholder {
+  /* IE 10+ */ }
+  input:required:-ms-input-placeholder:before {
+    content: "*";
+    color: #d9534f; }
+
+input:required:-moz-placeholder {
+  /* Firefox 18- */ }
+  input:required:-moz-placeholder:before {
+    content: "*";
+    color: #d9534f; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3MvYXBwLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
