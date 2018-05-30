@@ -1,0 +1,11 @@
+@import 'core/_directional.scss';
+@import "core/_variables-custom.scss";
+@import "core/_mixins-custom.scss";
+@import "core/_bootstrap-custom.scss";
+@import "core/_responsive-align.scss";
+/* Incude bootstrap-dialog to make use of Bootstrap Modal more friendly. Examples: http://nakupanda.github.io/bootstrap3-dialog/*/
+/*@import "components/bootstrap-dialog";*/
+/* Incude bootstrap-social-buttons to make use Social Buttons for Bootstrap. Examples: http://lipis.github.io/bootstrap-social/*/
+/*@import "components/bootstrap-social-buttons";*/
+@import "~font-awesome/scss/font-awesome.scss";
+@import "core/theme/theme";
