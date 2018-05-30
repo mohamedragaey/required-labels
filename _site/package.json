@@ -1,6 +1,6 @@
 {
   "name": "required-labels",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm package to add * into label tag in form if the input is required",
   "main": "src/js/require-label.js",
   "scripts": {
@@ -56,6 +56,7 @@
     "lodash": "^4.17.4",
     "mappy-breakpoints": "^0.2.3",
     "react": "^16.4.0",
+    "required-labels": "^1.0.1",
     "yarn-add-webpack-plugin": "^0.1.0"
   }
 }

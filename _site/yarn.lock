@@ -6881,6 +6881,19 @@ require-uncached@^1.0.2, require-uncached@^1.0.3:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
 
+required-labels@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/required-labels/-/required-labels-1.0.1.tgz#6eb5cb20b1dd46770997c584eb85273bd8fab748"
+  dependencies:
+    bootstrap-sass "^3.3.7"
+    bootstrap-sass-multi-directional "^3.3.1"
+    font-awesome "^4.7.0"
+    jquery "^3.2.1"
+    lodash "^4.17.4"
+    mappy-breakpoints "^0.2.3"
+    react "^16.4.0"
+    yarn-add-webpack-plugin "^0.1.0"
+
 requires-port@1.0.x, requires-port@1.x.x, requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
