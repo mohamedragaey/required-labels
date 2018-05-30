@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+## Welcome to Required label plugin
+### Install
+Using Yarn
+`yarn add required-labels`
 
-You can use the [editor on GitHub](https://github.com/mohamedragaey/required-labels/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Using NPM
+`npm install required-labels --save`
+### Usage
+* To use it with npm 
+```require('required-labels')``` 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* Then call the function
+--> `requiredLabels(selector)` 
 
-### Markdown
+### Examples
+HTML markup as default 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```HTML
+<div class="form-group">
+  <label for="firstName">First name</label>
+  <input id="firstName" class="form-control" type="text" placeholder="First name" required />
+</div>
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mohamedragaey/required-labels/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+JQuery function Call
+```JS
+$(document).ready(function () {
+    requiredLabels('#form')
+  })
+```

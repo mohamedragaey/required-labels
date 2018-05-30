@@ -51,7 +51,7 @@
     <!-- Page Content -->
     <div class="container">
       <div class="row">
-        <form>
+        <form id="firstForm">
           <div class="form-group">
             <input id="fname" class="form-control" type="text" placeholder="First name ..." required />
             <label for="fname">First name</label>
@@ -84,6 +84,16 @@
           </div>
           <button type="submit" class="btn btn-primary">submit</button>
         </form>
+        <form id="form">
+          <div class="form-group">
+            <label>second name</label>
+            <input type="text" placeholder="second name" required />
+          </div>
+          <div class="form-group">
+            <label for="radio">second name</label>
+            <input id="radio" type="radio" placeholder="second name" required />
+          </div>
+        </form>
       </div>
       <!-- /.row -->
     </div>
@@ -94,5 +104,11 @@
   </footer>
 </div>
 <script src="dist/js/main.js"></script>
+<script>
+  $(document).ready(function () {
+    requiredLabels('#firstForm')
+    requiredLabels('#form')
+  })
+</script>
 </body>
 </html>
