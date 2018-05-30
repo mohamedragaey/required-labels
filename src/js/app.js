@@ -1,2 +1,2 @@
-window.$ = window.JQuery = require('jquery')
+window.$ = window.jQuery = require('jquery')
 require('./require-label')

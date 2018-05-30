@@ -43,6 +43,10 @@
         <label for="password">password</label>
         <input id="password" type="password" placeholder="password" required />
       </div>
+      <div class="form-group">
+
+        <input id="email" type="email" placeholder="email" required />
+      </div>
     </form>
   </section>
   <footer>
@@ -52,7 +56,8 @@
 <script src="dist/js/required-label.js"></script>
 <script>
   $(document).ready(function () {
-    requiredLabels('#form')
+//    $('#form').requiredLabels()
+    $('#form').requiredLabels({createLabel: true})
   })
 </script>
 </body>

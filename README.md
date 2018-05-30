@@ -31,12 +31,39 @@ JQuery function Call
 require('required-labels')
 
 $(document).ready(function () {
-    requiredLabels('#form')
+    $('#form').requiredLabels()
   })
   
+```
+If You want to pass an option 
+```js
+$(document).ready(function () {
+    $('#form').requiredLabels({
+    createLabel: true //default is set to false 
+    })
+  })
+
 ```
 
 Add this code to your css file 
 ```Css
 @import "~required-labels/dist/css/app.css";
+```
+
+####Options
+`createLabel: false` This option is used if you have an input without label and you want to create a label for that required input you set the option to true
+
+Before
+```HTML
+<div class="form-group">
+<input id="email" type="email" placeholder="email" required />
+</div> 
+```
+
+After
+```HTML
+<div class="form-group">
+<label for="email">email*</label>
+<input id="email" type="email" placeholder="email" required />
+</div> 
 ```
