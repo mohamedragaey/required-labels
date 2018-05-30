@@ -1,3 +1,6 @@
+`Note`
+
+This plugin is build over jQuery you need to add jQuery to your app before calling the script
 ### Install
 Using Yarn
 `yarn add required-labels`
@@ -9,7 +12,10 @@ Using NPM
 ```require('required-labels')``` 
 
 * Then call the function
-`requiredLabels(selector)` 
+`requiredLabels(selector)`
+
+* Add the styles
+`@import "~required-labels/dist/css/app.css";` 
 
 ### Examples
 HTML markup as default 
@@ -22,7 +28,15 @@ HTML markup as default
 ```
 JQuery function Call
 ```JS
+require('required-labels')
+
 $(document).ready(function () {
     requiredLabels('#form')
   })
+  
+```
+
+Add this code to your css file 
+```Css
+@import "~required-labels/dist/css/app.css";
 ```
