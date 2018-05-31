@@ -1,13 +1,18 @@
 const path = require('path')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: ['./src/js/app.js', './src/scss/app.scss'],
 
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new ExtractTextPlugin({filename: 'css/app.css', disable: false, allChunks: true})
+    new ExtractTextPlugin({filename: 'css/app.css', disable: false, allChunks: true}),
+    new HTMLWebpackPlugin({
+      filename: 'demo.html',
+      template: path.resolve(__dirname, 'demo.html')
+    })
   ],
 
   output: {
