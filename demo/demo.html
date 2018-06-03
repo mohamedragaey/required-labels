@@ -7,7 +7,6 @@
   <meta name="author" content="" />
   <title>Demo page</title>
   <!--stylesheet-->
-  <link href="dist/css/app.css" rel="stylesheet">
   <style>
     .page-wrapper {
       display: flex;
@@ -30,7 +29,7 @@
       display: inline-block;
     }
   </style>
-<link href="/dist/css/app.css" rel="stylesheet"></head>
+<link href="demo.css" rel="stylesheet"></head>
 <body>
 <div id="wrapper" class="page-wrapper">
   <section class="content">
@@ -53,12 +52,14 @@
     <p>all rights reservied</p>
   </footer>
 </div>
-<script src="dist/js/required-label.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 <script>
   $(document).ready(function () {
 //    $('#form').requiredLabels()
     $('#form').requiredLabels({createLabel: true})
   })
 </script>
-<script type="text/javascript" src="/dist/js/required-label.js"></script></body>
+<script type="text/javascript" src="demo.js"></script></body>
 </html>

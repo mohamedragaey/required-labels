@@ -1,0 +1,21 @@
+.required-label {
+  position: relative; }
+
+.required-label:after {
+  content: "*";
+  color: #d9534f;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  max-height: 100%; }
+
+html[dir=ltr] .required-label {
+  padding-right: 10px; }
+  html[dir=ltr] .required-label:after {
+    right: 0; }
+
+html[dir=rtl] .required-label {
+  padding-left: 10px; }
+  html[dir=rtl] .required-label:after {
+    left: 0; }

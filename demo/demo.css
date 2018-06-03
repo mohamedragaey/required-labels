@@ -6,6 +6,7 @@
   color: #d9534f;
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   max-height: 100%; }
 
@@ -18,5 +19,3 @@ html[dir=rtl] .required-label {
   padding-left: 10px; }
   html[dir=rtl] .required-label:after {
     left: 0; }
-
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3MvYXBwLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
