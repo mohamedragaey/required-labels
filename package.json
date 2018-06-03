@@ -1,6 +1,6 @@
 {
   "name": "required-labels",
-  "version": "1.0.9",
+  "version": "1.0.8",
   "description": "npm package to add * into label tag in form if the input is required",
   "main": "src/js/require-label.js",
   "scripts": {
