@@ -12,7 +12,7 @@ Using NPM
 ```require('required-labels')``` 
 
 * Then call the function
-`requiredLabels(selector)`
+`$('selector').requiredLabels()`
 
 * Add the styles
 `@import "~required-labels/dist/css/app.css";` 
@@ -50,7 +50,7 @@ Add this code to your css file
 @import "~required-labels/dist/css/app.css";
 ```
 
-####Options
+#### Options
 `createLabel: false` This option is used if you have an input without label and you want to create a label for that required input you set the option to true
 
 Before
