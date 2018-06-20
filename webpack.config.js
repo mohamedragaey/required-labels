@@ -42,7 +42,7 @@ let rules = [
 module.exports = [
   {
     name: 'dist',
-    mode: 'production',
+    mode: 'development',
     entry: ['./src/js/require-label.js', './src/scss/app.scss'],
     output: {
       library: 'UserList',
@@ -60,30 +60,6 @@ module.exports = [
       new ExtractTextPlugin({filename: 'app.css'}),
       new HTMLWebpackPlugin({
         filename: 'index.html',
-        template: path.resolve(__dirname, 'demo.html')
-      })
-    ]
-  },
-  {
-    name: 'demo',
-    mode: 'production',
-    entry: ['./src/js/require-label.js', './src/scss/app.scss'],
-    output: {
-      library: 'UserList',
-      libraryTarget: 'umd',
-      libraryExport: 'default',
-      path: path.resolve(__dirname, 'demo'),
-      filename: 'demo.js'
-    },
-    module: {
-      rules: rules
-    },
-    plugins: [
-      new CleanWebpackPlugin(['demo']),
-      new uglifyJsPlugin(),
-      new ExtractTextPlugin({filename: 'demo.css'}),
-      new HTMLWebpackPlugin({
-        filename: 'demo.html',
         template: path.resolve(__dirname, 'demo.html')
       })
     ]

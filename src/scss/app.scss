@@ -11,9 +11,40 @@
   max-height: 100%;
 }
 
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.placeholder {
+  position: relative;
+  &:after {
+    top: 0;
+    width: 1em;
+    content: "*";
+    height: 100%;
+    color: #d9534f;
+    font-size: 1.5em;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(217, 83, 79, 0.2);
+  }
+  input {
+    width: 100%;
+  }
+}
+
 html[dir="ltr"] {
   .required-label {
     padding-right: 10px;
+    &:after {
+      right: 0;
+    }
+  }
+  .placeholder {
+    input {
+      padding-right: 20px;
+    }
     &:after {
       right: 0;
     }
@@ -23,6 +54,14 @@ html[dir="ltr"] {
 html[dir="rtl"] {
   .required-label {
     padding-left: 10px;
+    &:after {
+      left: 0;
+    }
+  }
+  .placeholder {
+    input {
+      padding-left: 20px;
+    }
     &:after {
       left: 0;
     }

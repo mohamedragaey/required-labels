@@ -6,14 +6,30 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <title>Demo page</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!--stylesheet-->
   <style>
+    body {
+      color: #fff;
+    }
+
     .page-wrapper {
+      padding: 15px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100%;
+      background: rgba(63, 209, 204, 1);
+      background: -moz-radial-gradient(center, ellipse cover, rgba(63, 209, 204, 1) 0%, rgba(47, 64, 80, 1) 99%, rgba(47, 64, 80, 1) 100%);
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(63, 209, 204, 1)), color-stop(99%, rgba(47, 64, 80, 1)), color-stop(100%, rgba(47, 64, 80, 1)));
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(63, 209, 204, 1) 0%, rgba(47, 64, 80, 1) 99%, rgba(47, 64, 80, 1) 100%);
+      background: -o-radial-gradient(center, ellipse cover, rgba(63, 209, 204, 1) 0%, rgba(47, 64, 80, 1) 99%, rgba(47, 64, 80, 1) 100%);
+      background: -ms-radial-gradient(center, ellipse cover, rgba(63, 209, 204, 1) 0%, rgba(47, 64, 80, 1) 99%, rgba(47, 64, 80, 1) 100%);
+      background: radial-gradient(ellipse at center, rgba(63, 209, 204, 1) 0%, rgba(47, 64, 80, 1) 99%, rgba(47, 64, 80, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fd1cc', endColorstr='#2f4050', GradientType=1);
     }
 
     .form-group {
@@ -33,32 +49,36 @@
 <body>
 <div id="wrapper" class="page-wrapper">
   <section class="content">
+    <h1 class="text-center">Required labels Demo</h1>
     <form id="form">
       <div class="form-group">
         <label for="name">Name</label>
-        <input id="name" type="text" placeholder="Name" required />
+        <input id="name" type="text" placeholder="Name" class="form-control" required />
       </div>
       <div class="form-group">
         <label for="password">password</label>
-        <input id="password" type="password" placeholder="password" required />
+        <input id="password" type="password" placeholder="password" class="form-control" required />
       </div>
       <div class="form-group">
-
-        <input id="email" type="email" placeholder="email" required />
+        <input id="emailAccount" name="email address" type="email" placeholder="email" class="form-control" required />
       </div>
     </form>
   </section>
-  <footer>
-    <p>all rights reservied</p>
-  </footer>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 <script>
   $(document).ready(function () {
 //    $('#form').requiredLabels()
-    $('#form').requiredLabels({createLabel: true})
+    $('#form').requiredLabels({
+//      createLabel: true,
+      placeholder: true
+    })
   })
 </script>
 </body>
