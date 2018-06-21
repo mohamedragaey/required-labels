@@ -1,37 +1,39 @@
 .required-label {
   position: relative;
-}
-
-.required-label:after {
-  content: '*';
-  color: #d9534f;
-  position: absolute;
-  top: 50%;
-  transform: translate(0%, -50%);
-  max-height: 100%;
-}
-
-.text-capitalize {
-  text-transform: capitalize;
+  &:after {
+    content: '*';
+    color: #d9534f;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    max-height: 100%;
+  }
 }
 
 .placeholder {
   position: relative;
   &:after {
-    top: 0;
-    width: 1em;
+    bottom: 0;
+    width: 34px;
     content: "*";
-    height: 100%;
+    height: 34px;
+    display: flex;
+    font-size: 22px;
     color: #d9534f;
-    font-size: 1.5em;
     position: absolute;
     text-align: center;
+    align-items: center;
     vertical-align: middle;
+    justify-content: center;
     background-color: rgba(217, 83, 79, 0.2);
   }
   input {
     width: 100%;
   }
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 html[dir="ltr"] {
@@ -43,7 +45,7 @@ html[dir="ltr"] {
   }
   .placeholder {
     input {
-      padding-right: 20px;
+      padding-right: 34px;
     }
     &:after {
       right: 0;
@@ -60,7 +62,7 @@ html[dir="rtl"] {
   }
   .placeholder {
     input {
-      padding-left: 20px;
+      padding-left: 34px;
     }
     &:after {
       left: 0;

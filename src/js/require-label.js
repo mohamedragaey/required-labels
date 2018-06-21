@@ -8,7 +8,6 @@
     let defaults = {
       createLabel: false,
       placeholder: false
-
     }
 
     let settings = $.extend({}, defaults, form)
@@ -44,8 +43,8 @@
         /**
          * If you need to add the astrisk * to the placehoder if you don't want to add a label
          */
-        if (settings.placeholder && ($(this).siblings('label').length <= 0)) {
-          let inputPlaceholder = $(this).attr('placeholder')
+        if (settings.placeholder) {
+          // let inputPlaceholder = $(this).attr('placeholder')
           // $(this).attr('placeholder', inputPlaceholder + ' * ').addClass('placeholder')
           $(this).parent().addClass('placeholder')
         }
@@ -57,6 +56,15 @@
         }
       }
     })
+
+    /**
+     * Adjust ::after height based on <input> height
+     */
+    let inputHeight = $('input').outerHeight()
+    let afterHeight = document.createElement('style')
+    afterHeight.innerHTML = '.placeholder:after {height:' + inputHeight + 'px}'
+    document.head.appendChild(afterHeight)
+
     return this
   }
 }(jQuery))
